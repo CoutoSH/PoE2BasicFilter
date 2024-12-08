@@ -91,23 +91,33 @@ Show #
 # Highlight Essences
 # ==========================
 Show # 
-    BaseType = "Essence"
+	BaseType = "Essence"
     SetFontSize 35                      # Small text
-    SetTextColor 0 0 0 255        	# Black text
-    SetBorderColor 0 0 0 255      	# Black border
+    SetTextColor 0 0 0 255        		# Black text
+    SetBorderColor 0 0 0 255      		# Black border
     SetBackgroundColor 51 51 255 255  	# Custom green background (R, G, B, Alpha)
     PlayAlertSound 2 100                # Alert sound (ID 2) at 300 volume	
 
 # ==========================
-# Hide All Normal Items with 0 Sockets and 0 Quality
+# Highlight Any currency
+# ==========================	
+Show
+    Class "Currency"
+    SetFontSize 30
+    SetTextColor 255 255 0 255       # Yellow text
+    SetBorderColor 255 255 0 255     # Yellow border
+    SetBackgroundColor 0 0 0 255     # Black background
+
+# ==========================
+# Hide All Normal Equipment with 0 Sockets and 0 Quality
 # ==========================
 Hide
+    Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Bows" "Staves" "Wands" "Quivers"
     Rarity = Normal
     Sockets = 0
     Quality = 0
-
 # ==========================
 # Safety Catch-All for Non-Filtered Items (Basic Display)
 # ==========================
 Show # SAFETY ALL NON-FILTERED ITEMS
-    SetFontSize 33                      # Small default font size for unfiltered items
+    SetFontSize 20                      # Small default font size for unfiltered items
