@@ -82,10 +82,21 @@ Show # %D7 $type->currency->stackedthree $tier->t3
 Show # 
 	Sockets > 0
     SetFontSize 30                      # Small text
-    SetTextColor 255 255 255 255          # Black text
-    SetBorderColor 255 255 255 255        # Black border
+    SetTextColor 255 255 255 255        # Black text
+    SetBorderColor 255 255 255 255      # Black border
     SetBackgroundColor 50 50 50 255   	# Custom green background (R, G, B, Alpha)
     PlayAlertSound 2 000                # Alert sound (ID 2) at 300 volume	
+
+# ==========================
+# Highlight Essences
+# ==========================
+Show # 
+    BaseType = "Essence"
+    SetFontSize 35                      # Small text
+    SetTextColor 0 0 0 255        	# Black text
+    SetBorderColor 0 0 0 255      	# Black border
+    SetBackgroundColor 51 51 255 255  	# Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 100                # Alert sound (ID 2) at 300 volume	
 
 # ==========================
 # Hide All Normal Items with 0 Sockets and 0 Quality
