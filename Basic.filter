@@ -1,0 +1,102 @@
+#Made by TWITCH.TV/OHCOUTO
+
+# ==========================
+# Highlight Important Currency (Exalted, Divine, Mirror, etc.)
+# ==========================
+Show # $type->currency $tier->t1exalted
+    BaseType == "Exalted Orb" "Mirror of Kalandra" "Orb of Alchemy" "Divine Orb" "Orb of Annulment" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Gemcutter's Prism"
+    SetFontSize 45                      # Large text for high visibility
+    SetTextColor 255 0 0 255            # Bright red text (R, G, B, Alpha)
+    SetBorderColor 255 0 0 255          # Red border for high visibility
+    SetBackgroundColor 255 255 255 255  # White background to contrast with text
+    PlayEffect Red                      # Red beam of light on item drop
+    MinimapIcon 0 Red Star              # Red star on minimap
+    PlayAlertSound 6 300                # Alert sound for valuable items
+
+# ==========================
+# Highlight Chaos Orbs (Special Rule)
+# ==========================
+Show 
+    BaseType == "Chaos Orb"
+    SetFontSize 45                      # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 240 90 35 255    # Custom reddish-orange background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+
+# ==========================
+# Highlight Armourer's Scrap (Special Visuals)
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType == "Armourer's Scrap"
+    SetFontSize 45                      # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 240 150 35 255   # Custom orange background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+
+# ==========================
+# Highlight Currency (Other Currency Items)
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType == "Regal Orb" "Orb of Augmentation" "Orb of Transmutation" "Vaal Orb" "Artificer's Orb" "Lesser Jeweller's Orb" "Glassblower's Bauble" "Orb of Chance"
+    SetFontSize 45                      # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 240 90 35 255    # Custom reddish-orange background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+
+# ==========================
+# Highlight Special Runes (Iron, Storm, Glacial, etc.)
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType == "Iron Rune" "Storm Rune" "Glacial Rune" "Body Rune" "Desert Rune" "Stone Rune" "Mind Rune"
+    SetFontSize 45                      # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 70 180 35 255    # Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+	
+# ==========================
+# Highlight Gold
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType == "Gold"
+    SetFontSize 20                      # Small text
+    SetTextColor 205 150 0 255          # Black text
+    SetBorderColor 205 150 0 200        # Black border
+    SetBackgroundColor 205 150 0 0   	# Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 000                # Alert sound (ID 2) at 300 volume
+	
+# ==========================
+# Highlight Itens w/ Sockets
+# ==========================
+Show # 
+	Sockets > 0
+    SetFontSize 30                      # Small text
+    SetTextColor 255 255 255 255          # Black text
+    SetBorderColor 255 255 255 255        # Black border
+    SetBackgroundColor 50 50 50 255   	# Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 000                # Alert sound (ID 2) at 300 volume	
+
+# ==========================
+# Hide All Normal Items with 0 Sockets and 0 Quality
+# ==========================
+Hide
+    Rarity = Normal
+    Sockets = 0
+    Quality = 0
+
+# ==========================
+# Safety Catch-All for Non-Filtered Items (Basic Display)
+# ==========================
+Show # SAFETY ALL NON-FILTERED ITEMS
+    SetFontSize 33                      # Small default font size for unfiltered items
