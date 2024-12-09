@@ -145,10 +145,9 @@ Show
 # ==========================
 Show
     Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Staves" "Wands" "Quivers" "Sceptres" "Crossbows" "Bows"
-	Rarity = Normal
-	Sockets = 0
+    Rarity = Normal
+    Sockets = 0
     Quality = 0
-	SetFontSize 30
     	
 # ==========================
 # Safety Catch-All for Non-Filtered Items (Basic Display)
