@@ -133,9 +133,9 @@ Show
 # Hide All Normal Equipment with 0 Sockets and 0 Quality
 # ==========================
 Hide
-    Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Staves" "Wands" "Quivers"
-    Rarity = Normal
-    Sockets = 0
+    Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Staves" "Wands" "Quivers" "Sceptres" "Crossbows"
+	Rarity = Normal
+	Sockets = 0
     Quality = 0
 	
 # ==========================
