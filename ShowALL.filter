@@ -136,7 +136,9 @@ Show
 	Rarity = Rare
     SetTextColor 255 228 0 255        	# Yellow text
     SetBorderColor 255 228 0 255      	# Yellow border
+    PlayAlertSound 12 100		#Sound Alert for rare itens
 
+	
 
 # ==========================
 # All Normal Equipment with 0 Sockets and 0 Quality
