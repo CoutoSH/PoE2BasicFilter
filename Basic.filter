@@ -18,10 +18,10 @@ Show # $type->currency $tier->t1exalted
 # ==========================
 Show 
     BaseType == "Chaos Orb"
-    SetFontSize 45                      # Large text
+    SetFontSize 38                     # Large text
     SetTextColor 0 0 0 255              # Black text
     SetBorderColor 0 0 0 255            # Black border
-    SetBackgroundColor 240 90 35 255    # Custom reddish-orange background (R, G, B, Alpha)
+    SetBackgroundColor 255 205 50 255    # Custom reddish-orange background (R, G, B, Alpha)
     PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
     PlayEffect Yellow                   # Yellow beam of light on item drop
     MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
@@ -44,10 +44,10 @@ Show # %D7 $type->currency->stackedthree $tier->t3
 # ==========================
 Show # %D7 $type->currency->stackedthree $tier->t3
     BaseType == "Regal Orb" "Orb of Augmentation" "Orb of Transmutation" "Vaal Orb" "Artificer's Orb" "Lesser Jeweller's Orb" "Glassblower's Bauble" "Orb of Chance"
-    SetFontSize 45                      # Large text
+    SetFontSize 35                      # Large text
     SetTextColor 0 0 0 255              # Black text
     SetBorderColor 0 0 0 255            # Black border
-    SetBackgroundColor 240 90 35 255    # Custom reddish-orange background (R, G, B, Alpha)
+    SetBackgroundColor 255 178 102 250  # Custom reddish-orange background (R, G, B, Alpha)
     PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
     PlayEffect Yellow                   # Yellow beam of light on item drop
     MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
@@ -104,9 +104,9 @@ Show #
 Show
     BaseType "Scroll of Wisdom"
     SetFontSize 20
-    SetTextColor 255 192 176 255       # Yellow text
-    SetBorderColor 255 192 176 255     # Yellow border
-    SetBackgroundColor 0 0 0 255     # Black background	
+    SetTextColor 255 192 176 255        # Yellow text
+    SetBorderColor 255 192 176 255      # Yellow border
+    SetBackgroundColor 0 0 0 255        # Black background	
 
 # ==========================
 # Highlight Any currency
@@ -114,18 +114,19 @@ Show
 Show
     Class "Currency"
     SetFontSize 30
-    SetTextColor 255 255 0 255       # Yellow text
-    SetBorderColor 255 255 0 255     # Yellow border
-    SetBackgroundColor 0 0 0 255     # Black background
+    SetTextColor 255 255 0 255         # Yellow text
+    SetBorderColor 255 255 0 255       # Yellow border
+    SetBackgroundColor 0 0 0 255       # Black background
 
 # ==========================
 # Hide All Normal Equipment with 0 Sockets and 0 Quality
 # ==========================
 Hide
-    Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Bows" "Staves" "Wands" "Quivers"
+    Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Staves" "Wands" "Quivers"
     Rarity = Normal
     Sockets = 0
     Quality = 0
+	
 # ==========================
 # Safety Catch-All for Non-Filtered Items (Basic Display)
 # ==========================
