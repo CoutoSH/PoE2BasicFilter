@@ -1,0 +1,198 @@
+#Made by TWITCH.TV/OHCOUTO
+#Hides nothing, highlight rares
+
+# ==========================
+# Highlight Important Currency (Exalted, Divine, Mirror, etc.)
+# ==========================
+Show # $type->currency $tier->t1exalted
+    BaseType ==  "Mirror of Kalandra" "Divine Orb" "Orb of Annulment" "Greater Jeweller's Orb" "Perfect Jeweller's Orb" "Gemcutter's Prism"
+    SetFontSize 45                      # Large text for high visibility
+    SetTextColor 255 0 0 255            # Bright red text (R, G, B, Alpha)
+    SetBorderColor 255 0 0 255          # Red border for high visibility
+    SetBackgroundColor 255 255 255 255  # White background to contrast with text
+    PlayEffect Red                      # Red beam of light on item drop
+    MinimapIcon 0 Red Star              # Red star on minimap
+    PlayAlertSound 6 300                # Alert sound for valuable items
+
+# ==========================
+# Highlight Chaos Orbs (Special Rule)
+# ==========================
+Show 
+    BaseType == "Exalted Orb" "Chaos Orb" "Orb of Alchemy"
+    SetFontSize 38                     # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 255 205 50 255    # Custom reddish-orange background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+
+# ==========================
+# Highlight Currency (Other Currency Items)
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType == "Regal Orb" "Orb of Augmentation" "Orb of Transmutation" "Vaal Orb" "Artificer's Orb" "Lesser Jeweller's Orb" "Glassblower's Bauble" "Orb of Chance" "Armourer's Scrap"
+    SetFontSize 35                      # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 255 178 102 250  # Custom reddish-orange background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+
+# ==========================
+# Highlight Special Runes (Iron, Storm, Glacial, etc.)
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType "Rune"
+    SetFontSize 35                      # Large text
+    SetTextColor 0 0 0 255              # Black text
+    SetBorderColor 0 0 0 255            # Black border
+    SetBackgroundColor 153 255 255 255    # Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 300                # Alert sound (ID 2) at 300 volume
+    PlayEffect Yellow                   # Yellow beam of light on item drop
+    MinimapIcon 1 Yellow Circle         # Yellow circle on minimap
+	
+# ==========================
+# Highlight Gold
+# ==========================
+Show # %D7 $type->currency->stackedthree $tier->t3
+    BaseType == "Gold"
+    SetFontSize 28                      # Small text
+    SetTextColor 205 150 0 255          # Black text
+    SetBorderColor 205 150 0 200        # Black border
+    SetBackgroundColor 205 150 0 0   	# Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 000                # Alert sound (ID 2) at 300 volume
+	
+# ==========================
+# Highlight NORMAL Bows Build Items
+# ==========================	
+Show
+	BaseType = "Dualstring Bow" "Volant Quiver" "Primed Quiver" "Expert Spined Bracers" "Expert Lizardscale Boots" "Golden Mantle" "Expert Studded Vest" "Expert Serpentscale Coat" "Expert Hunter Hood"
+    SetTextColor 50 170 0 255        	# Yellow text
+    SetBorderColor 50 170 0 255      	# Yellow border
+	
+# ==========================
+# Highlight Bows Build Items
+# ==========================	
+Show
+	BaseType = "Expert Feathered Sandals" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
+    SetTextColor 170 255 255 255        	# Yellow text
+    SetBorderColor 170 255 255 255      	# Yellow border
+
+# ==========================
+# Highlight Bows Build Items
+# ==========================	
+Show
+	Class = "Ring" "Amulet" "Belt"
+    SetTextColor 150 170 100 255        	# Yellow text
+    SetBorderColor 150 170 100 255      	# Yellow border
+	
+# ==========================
+# Highlight Itens w/ Sockets
+# ==========================
+Show # 
+	Sockets > 0
+    SetFontSize 30                      # Small text
+    SetTextColor 255 255 255 255        # Black text
+    SetBorderColor 255 255 255 255      # Black border
+    SetBackgroundColor 50 50 50 255   	# Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 000                # Alert sound (ID 2) at 300 volume	
+
+# ==========================
+# Highlight Essences
+# ==========================
+Show # 
+	BaseType = "Essence"
+    SetFontSize 35                      # Small text
+    SetTextColor 0 0 0 255        		# Black text
+    SetBorderColor 0 0 0 255      		# Black border
+    SetBackgroundColor 51 51 255 255  	# Custom green background (R, G, B, Alpha)
+    PlayAlertSound 2 100                # Alert sound (ID 2) at 300 volume	
+	
+# ==========================
+# Highlight Scroll of Wisdom
+# ==========================	
+Show
+    BaseType "Scroll of Wisdom"
+    SetFontSize 25
+    SetTextColor 255 192 176 255        # Yellow text
+    SetBorderColor 255 192 176 255      # Yellow border
+    SetBackgroundColor 0 0 0 255        # Black background	
+
+# ==========================
+# Highlight Any currency
+# ==========================	
+Show
+    Class "Currency"
+    SetFontSize 30
+    SetTextColor 255 255 0 255         # Yellow text
+    SetBorderColor 255 255 0 255       # Yellow border
+    SetBackgroundColor 0 0 0 255       # Black background
+
+# ==========================
+# Highlight Item w/ Quality
+# ==========================	
+Show
+	Quality > 0
+    SetFontSize 35
+    SetTextColor 0 0 0 255        		# Yellow text
+    SetBorderColor 96 96 96 255      	# Yellow border
+    SetBackgroundColor 100 100 100 255  # Black background	
+	
+# ==========================
+# Highlight Emeralds
+# ==========================	
+Show
+	BaseType == "Emerald"
+    SetTextColor 0 255 0 255        	# Yellow text
+    SetBorderColor 0 255 0 255      	# Yellow border
+
+# ==========================
+# Highlight Ruby
+# ==========================	
+Show
+	BaseType == "Ruby"
+    SetTextColor 255 0 0 255        	# Yellow text
+    SetBorderColor 255 0 0 255      	# Yellow border
+
+# ==========================
+# Highlight Sapphires
+# ==========================	
+Show
+	BaseType == "Sapphire"
+    SetTextColor 0 0 255 255        	# Yellow text
+    SetBorderColor 0 0 255 255      	# Yellow border	
+	
+# ==========================
+# Highlight Rare Itens
+# ==========================	
+Show
+	Rarity = Rare
+    SetTextColor 255 228 0 255        	# Yellow text
+    SetBorderColor 255 228 0 255      	# Yellow border
+    PlayAlertSound 12 200				#Sound Alert for rare itens
+
+# ==========================
+# Highlight Evasion Items
+# ==========================	
+Show
+	BaseType "Expert"
+    SetFontSize 28
+	Rarity = Normal
+	
+# ==========================
+# All Normal Equipment with 0 Sockets and 0 Quality
+# ==========================
+Hide
+    Class "Body Armour" "Boots" "Gloves" "Helmets" "Shields" "Daggers" "Claws" "One Hand Axes" "One Hand Maces" "One Hand Swords" "Two Hand Axes" "Two Hand Maces" "Two Hand Swords" "Staves" "Wands" "Sceptres" "Crossbows" "Bows" "Focus" "Mana Flask" "Life Flask" "Quivers"
+    Rarity < Rare
+    Sockets = 0
+    Quality = 0
+	SetFontSize 25 
+    	
+# ==========================
+# Safety Catch-All for Non-Filtered Items (Basic Display)
+# ==========================
+Show # SAFETY ALL NON-FILTERED ITEMS
+    SetFontSize 30                     # Small default font size for unfiltered items
