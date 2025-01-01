@@ -1,6 +1,33 @@
 #Made by TWITCH.TV/OHCOUTO
 #Hides nothing, highlight rares
 
+Hide 
+    BaseType "Emerald Ring"
+    Rarity < Rare   
+# ==========================
+# Highlight Uncut Gem
+# ==========================
+    
+Show
+    BaseType "Uncut"
+    ItemLevel = 20
+    SetFontSize 45
+    SetTextColor 255 0 0 255
+    SetBorderColor 255 0 0 255
+    SetBackgroundColor 255 255 255 255
+    PlayAlertSound 6 300
+    PlayEffect Red
+    MinimapIcon 0 Red Star
+
+Hide
+    BaseType "Uncut"
+    ItemLevel = 3
+    AreaLevel >= 65
+
+Hide
+    BaseType "Uncut"
+    ItemLevel < 19
+    AreaLevel >= 65
 # ==========================
 # Highlight Unique
 # ==========================
@@ -35,16 +62,16 @@ Show # $type->currency $tier->t1exalted
     PlayEffect Red                      # Red beam of light on item drop
     MinimapIcon 0 Red Star              # Red star on minimap
     PlayAlertSound 6 300                # Alert sound for valuable items
-Show    
-    BaseType "Heavy Belt" "Stellar Amulet"
-    Rarity = Normal
-    SetFontSize 45                      # Large text for high visibility
-    SetTextColor 255 0 0 255            # Bright red text (R, G, B, Alpha)
-    SetBorderColor 255 0 0 255          # Red border for high visibility
-    SetBackgroundColor 255 255 255 255  # White background to contrast with text
-    PlayEffect Red                      # Red beam of light on item drop
-    MinimapIcon 0 Red Star              # Red star on minimap
-    PlayAlertSound 6 300                # Alert sound for valuable items
+#Show    
+#    BaseType "Heavy Belt" "Stellar Amulet"
+#    Rarity = Normal
+#    SetFontSize 45                      # Large text for high visibility
+#    SetTextColor 255 0 0 255            # Bright red text (R, G, B, Alpha)
+#    SetBorderColor 255 0 0 255          # Red border for high visibility
+#    SetBackgroundColor 255 255 255 255  # White background to contrast with text
+#    PlayEffect Red                      # Red beam of light on item drop
+#    MinimapIcon 0 Red Star              # Red star on minimap
+#    PlayAlertSound 6 300                # Alert sound for valuable items
 
 # ==========================
 # Highlight Chaos Orbs (Special Rule)
@@ -101,16 +128,50 @@ Show # %D7 $type->currency->stackedthree $tier->t3
 # ==========================	
 Show
 	BaseType = "Dualstring Bow" "Volant Quiver" "Primed Quiver" "Expert Spined Bracers" "Expert Lizardscale Boots" "Golden Mantle" "Expert Studded Vest" "Expert Serpentscale Coat" "Expert Hunter Hood" "Golden Obi" "Wide Belt" "Mail Belt" "Double Belt"
+    Rarity = Normal
     SetTextColor 50 170 0 255        	# Yellow text
     SetBorderColor 50 170 0 255      	# Yellow border
+    SetBackgroundColor 192 192 192 150
+    
+    
+Show
+	BaseType = "Dualstring Bow" "Volant Quiver" "Primed Quiver" "Expert Spined Bracers" "Expert Lizardscale Boots" "Golden Mantle" "Expert Studded Vest" "Expert Serpentscale Coat" "Expert Hunter Hood" "Golden Obi" "Wide Belt" "Mail Belt" "Double Belt"
+    Rarity = Magic
+    SetTextColor 50 170 0 255        	# Yellow text
+    SetBorderColor 50 170 0 255      	# Yellow border
+    SetBackgroundColor 0 0 255 150
+    
+Show
+	BaseType = "Dualstring Bow" "Volant Quiver" "Primed Quiver" "Expert Spined Bracers" "Expert Lizardscale Boots" "Golden Mantle" "Expert Studded Vest" "Expert Serpentscale Coat" "Expert Hunter Hood" "Golden Obi" "Wide Belt" "Mail Belt" "Double Belt"
+    Rarity = Rare
+    SetTextColor 50 170 0 255        	# Yellow text
+    SetBorderColor 50 170 0 255      	# Yellow border    
+    SetBackgroundColor 255 255 51 150
 	
 # ==========================
-# Highlight Bows Build Items
+# Highlight ES Build Items
 # ==========================	
 Show
 	BaseType = "Expert Feathered Sandals" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
+    Rarity = Normal
     SetTextColor 170 255 255 255        	# Yellow text
     SetBorderColor 170 255 255 255      	# Yellow border
+    SetBackgroundColor 192 192 192 150
+
+Show
+	BaseType = "Expert Feathered Sandals" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
+    Rarity = Rare
+    SetTextColor 170 255 255 255        	# Yellow text
+    SetBorderColor 170 255 255 255      	# Yellow border
+    SetBackgroundColor 255 255 51 150
+    
+    
+Hide
+	BaseType = "Expert Feathered Sandals" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
+    Rarity = Magic
+    SetTextColor 170 255 255 255        	# Yellow text
+    SetBorderColor 170 255 255 255      	# Yellow border
+
 
 # ==========================
 # Highlight Bows Build Items
@@ -221,7 +282,7 @@ Show
 #--------------------------
 
 Show
-    WaystoneTier < 10
+    WaystoneTier < 9
     AreaLevel > 77
     BaseType "Waystone"
     Rarity <= Rare
@@ -229,9 +290,18 @@ Show
     SetBorderColor 255 255 255
     SetFontSize 35
 
+#Hide
+#    WaystoneTier < 8
+#    AreaLevel >= 74
+#    BaseType "Waystone"
+#    Rarity <= Rare
+#    SetTextColor 255 255 255
+#    SetBorderColor 255 255 255
+#    SetFontSize 35
+
 Show
-    WaystoneTier < 5
-    AreaLevel > 74
+    WaystoneTier < 8
+    AreaLevel < 74
     BaseType "Waystone"
     Rarity <= Rare
     SetTextColor 255 255 255
