@@ -420,7 +420,7 @@ Show
     SetBackgroundColor 255 255 51 150
     
     
-Hide
+Show
 	BaseType = "Expert Feathered Sandals" "Expert Hexer's Robe" "Expert Feathered Tiara" "Expert Chain Tiara"
     Rarity = Magic
     SetTextColor 170 255 255 255        	# Yellow text
